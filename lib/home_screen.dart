@@ -67,11 +67,23 @@ class HomeScreen extends ConsumerWidget {
               },
             ),
             SizedBox(width: 10),
-            ElevatedButton(
-              onPressed: () {
-                ref.read(counter.notifier).state++;
-              },
-              child: Text('+'),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                ElevatedButton(
+                  onPressed: () {
+                    ref.read(counter.notifier).state++;
+                  },
+                  child: Text('+'),
+                ),
+                SizedBox(width: 10),
+                ElevatedButton(
+                  onPressed: () {
+                    ref.read(counter.notifier).state--;
+                  },
+                  child: Text('-'),
+                ),
+              ],
             ),
           ],
         ),

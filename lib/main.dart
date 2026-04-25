@@ -12,7 +12,11 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return ProviderScope(
-      child: MaterialApp(title: 'Flutter provider example', home: HomeScreen()),
+      child: MaterialApp(
+        debugShowCheckedModeBanner: false,
+        title: 'Flutter provider example',
+        home: HomeScreen(),
+      ),
     );
   }
 }
